@@ -32,7 +32,7 @@ La idea es que ya existen muchos ejemplos de inteligencia general humana (HGI) e
 
 "Muchos creen que la ingeniería de avisos es una habilidad que hay que aprender para ser competitivo en el futuro. La realidad es que dirigir sistemas de IA no es diferente de ser un comunicador eficaz con otros seres humanos. En ambos casos se aplican los mismos principios. Esto me hace apostar por la lectura, la escritura y la expresión oral como las tres habilidades subyacentes que realmente importarán en 2024. El otro día escuché a alguien (creo que a @blader) decir que ya tienes muchos ejemplos de HGI (inteligencia general humana) en tu vida actual. Es probable que trabajes y tengas profundas relaciones con HGI, centrarte en las habilidades necesarias para comunicarte eficazmente con los humanos te pondrá a prueba en el futuro para un mundo con AGI."
 
-![Alt text](./images/gerente-de-open-ai/Logan.GPT.png)
+![Alt text](/images/gerente-de-open-ai/Logan.GPT.png)
 
 ## Se demanda un puesto de ingeniero rápido
 En marzo, una startup de inteligencia artificial con sede en San Francisco llamada Anthropic se volvió viral por  contratar ingenieros y bibliotecarios listos para trabajar por hasta 335.

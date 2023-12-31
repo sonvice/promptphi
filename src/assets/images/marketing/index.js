@@ -1,4 +1,3 @@
-import predis from './predis.jpeg';
 import simplified from './simplified.com.jpeg';
 import namelix from './Namelix.jpeg';
 import neuroflash from './Neuroflash.jpeg';

@@ -9,6 +9,5 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: 'http://www.promptphi.com/',
   integrations: [mdx(), sitemap(), react()],
-  output: "server",
   adapter: netlify()
 });
