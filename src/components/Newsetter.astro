@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import { mail3D } from '../assets/images';
+---
+
+<div class="newsletter container text-color-slate-950 mt-space-3xl">
+    <div class="newsletter__img">
+        <Image src={mail3D} width={140} alt='Icono de email en 3D'>
+    </div>
+    <div class="newsletter__form-box flow bg-color-primary radius">
+        <h2 class="size-3">Suscríbete</h2>
+        <p>Suscríbete a nuestro boletín y mantente al tanto de las últimas y emocionantes interacciones con la inteligencia artificial.</p>
+        <form data-netlify-recaptcha="true" class="newsletter__form d-flex mt-space-l">
+            <input type="text" placeholder="E-mail" required>
+            <button type="submit">Suscribirme</button>
+            <div data-netlify-recaptcha="true"></div>
+        </form>
+    </div>
+</div>

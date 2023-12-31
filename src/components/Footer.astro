@@ -1,0 +1,18 @@
+---
+const today = new Date();
+import {logo} from '../assets/icons'
+import { Twitter,Instagram } from 'lucide-astro'
+---
+
+<footer class="footer container-md py-space-m">
+	<div class="footer__logo d-flex mt-space-3xl pb-space-m">
+		<img src={logo.src} alt="Logo Promphi" width={logo.width} height={logo.height}>
+		<div class="d-flex">
+			<a href="#" aria-label="Twitter"><Twitter/></a><a href="#" aria-label="Instagram"><Instagram/></a>
+		</div>
+	</div>
+	<small>
+
+		&copy; {today.getFullYear()} Promptphi
+	</small>
+</footer>

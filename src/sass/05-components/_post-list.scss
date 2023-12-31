@@ -1,0 +1,33 @@
+@use '../01-abstracts/' as ab;
+
+.post-list{
+    padding-top: var(--space-2xl);
+    &__article{
+        overflow: hidden;
+        
+        & img{
+            object-fit: cover;
+        }
+    }
+
+
+    @include ab.breakpoint(md){
+        --min-max:20rem;
+        --gap:var(--space-m);
+        & > article:first-child{
+           grid-column: 2 span; 
+           display: grid;
+           grid-template-columns: repeat(5, 1fr);
+           gap: var(--space-m);
+        }
+         &__article:first-child  &__img{
+                 grid-column: 3 span;
+         }
+    
+        &__text{
+            grid-column: 2 span;
+        }
+
+    }
+   
+}

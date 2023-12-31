@@ -1,0 +1,40 @@
+---
+const {setTags,clases} = Astro.props
+---
+
+<div class:list={["tag-hero",[clases]]}>
+    <ul role="list" class="list d-flex py-space-s">
+      {
+        setTags.map((tag) => {
+          return (
+            <li class="tag | radius bg-color-slate-950">
+              <a class="tag__link | text-nowrap size--1 text-color-slate-50 px-space-xs py-space-3xs"
+                href={`#${tag.split(' ').join('-').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`}
+              >
+                {tag}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+    
+      const listTag = document.querySelectorAll('.tag')
+      listTag.forEach((item)=>{
+          item.addEventListener('click',()=>{
+              //Quitar todas las clases
+              listTag.forEach((otherItem)=>{
+              otherItem.classList.remove('current')
+          })
+          //Añadir la clase
+             item.classList.add('current')
+          })
+      })
+    
+    
+    })
+  </script>

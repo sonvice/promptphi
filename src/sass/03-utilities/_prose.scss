@@ -1,0 +1,3 @@
+.prose :is(h2, h3, h4,blockquote,figure + *) {
+    --flow: var(--space-xl);
+}

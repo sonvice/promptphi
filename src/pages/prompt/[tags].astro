@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Prompt from "../../components/Prompt.astro";
+
+export async function getStaticPaths() {
+  
+const promptTags = await getCollection("prompt");
+//Devuelve un array con con todos los tags
+const tagsCollection = promptTags.map((tags)=>[...tags.data.tags])
+//Aplanando los array con el método flat(), y new Set para generar un objeto sin duplicados, los corchetes son para guardar ese objeto
+const allTag = [...new Set(tagsCollection.flat())];
+//Generando rutas para cada tag
+  return allTag.map((tag) => {
+    return {
+      params: { tags: tag.split(' ').join('-').toLocaleLowerCase()},
+      props: {tag}, 
+    }
+  });
+}
+
+const  {tag} = Astro.props;
+//Filtrando los post que contiene una etiqueta específica
+const promps = await getCollection('prompt', ({data})=>{
+  return data.tags.includes(tag)
+})
+
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <BaseHead title={tag} description=""></BaseHead>
+</head>
+<body>
+  <Header/>
+  <div class="container">
+    <h2>{tag}</h2>
+  </div>
+  <ul role="list" class="container">
+    {promps.map((prompt)=>{
+    return (<li><Prompt title={prompt.data.title} prompt={prompt.body}/></li>)
+  
+    })}
+  </ul>
+</body>
+</html>

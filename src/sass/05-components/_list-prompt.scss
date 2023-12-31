@@ -1,0 +1,7 @@
+@use '../01-abstracts' as ab;
+.list-prompt{
+    &__title {
+        font-weight: var(--fw-bold);
+        padding-top:8.5rem;
+    }
+}

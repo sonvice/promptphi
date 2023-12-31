@@ -1,0 +1,37 @@
+---
+const { title, prompt } = Astro.props;
+import { Copy,Terminal,Check } from 'lucide-astro'
+---
+<div class="prompt-title | d-flex mb-space-s mt-space-m">
+    <label class="text-capitalize"><span class="mr-space-2xs"><Terminal/></span>{title}</label> 
+    <button class="copy-btn | d-flex"> <span class="visually-hidden">Copiar</span> <Copy/></button> </div>
+</div>
+<p contenteditable="true" class="prompt-content editable | bg-color-slate-600 p-space-s">{prompt}</p>
+
+
+<script>
+   document.addEventListener('astro:page-load', () => {
+  
+    const promptContent = document.querySelectorAll('.prompt-content') 
+   const copyBtn = document.querySelectorAll(".copy-btn");
+   copyBtn?.forEach((item,index) => {
+     item.addEventListener("click", () => {
+       //const editableElement = item.parentElement
+       const selection = window.getSelection();
+       const range = document.createRange();
+       range.selectNodeContents(promptContent[index]);
+       selection.removeAllRanges();
+       selection.addRange(range);
+ 
+       document.execCommand('copy');
+       selection.removeAllRanges();
+       
+       item.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+ 
+       setTimeout(()=>{
+         item.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>'
+       },800)
+     });
+   });
+  })
+</script>

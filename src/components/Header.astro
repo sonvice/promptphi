@@ -1,0 +1,25 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import { Home, Newspaper,Wand2 } from "lucide-astro";
+import { logo } from "../assets/icons";
+---
+
+<header class="header">
+  <nav class="d-flex py-space-m container-lg">
+    <a href="/">
+      <img
+        src={logo.src}
+        width={logo.width}
+        height={logo.height}
+        alt="Promptphi logo presentación"
+      /><span class="visually-hidden">Logo Promptphi</span>
+    </a>
+    <ul role="list" class="header__list | d-flex">
+      <li><HeaderLink href="/"><Home /> Home</HeaderLink></li>
+      <li><HeaderLink href="/blog"><Newspaper /> Blog</HeaderLink></li>
+      <li><HeaderLink href="/tools"><Wand2 /> Tools</HeaderLink></li>
+      <ul></ul>
+    </ul>
+  </nav>
+</header>

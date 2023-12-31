@@ -1,0 +1,41 @@
+.newsletter{
+    position: relative;
+
+    &__img{
+        position: absolute;
+        top: -6rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__form-box{
+        padding-inline: var(--space-m);
+        padding-block-start: var(--space-2xl);
+        padding-block-end: var(--space-l);
+        text-align: center;
+        & h3{
+            text-transform: uppercase;
+        }
+    }
+
+    &__form{
+        --gutter:var(--space-2xs);
+        --a-vertical:stretch;
+        & input,& button{
+          flex-grow: 1;
+          border-radius: var(--radius);
+          border: none;
+        }
+        & button{
+            cursor: pointer;
+            background-color: var(--color-secondary);
+            border: none;
+            font-weight: var(--fw-semiBold);
+            padding-block: var(--space-xs);
+        }
+        & input{
+            flex-basis: 280px;
+            padding: var(--space-xs);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-slate-transparent);
+    backdrop-filter: blur(8px);
+    nav{
+        --a-horizontal:space-between;
+        --gutter:var(--space-m);
+    }
+
+    &__list{
+        a {
+            --gutter:var(--space-2xs);
+        }
+    }
+}

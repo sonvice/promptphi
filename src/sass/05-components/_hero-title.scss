@@ -1,0 +1,44 @@
+@use '../01-abstracts' as ab;
+
+.hero-title{
+    &-arrow{
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+    }
+    &-arrow::after{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: -2px;
+        z-index: -1;
+        display: inline-block;
+        border-radius: 100vw;
+        background-color: var(--color-primary);
+        
+    }
+    &-prompt{
+        position: relative;
+        padding-inline: 8px;
+        color: var(--color-secondary);
+        @include ab.breakpoint(md){
+            padding-inline: 8px;
+            color: var(--color-slate-950);
+        }
+    }
+
+    @include ab.breakpoint(md){
+    
+        &-prompt::after{
+            content: '';
+            position: absolute;
+            background-color: var(--color-secondary);
+            display: inline-block;
+            inset: 6px 0;
+            min-height: ab.px-to-rem(50px);
+            border-radius: var(--radius);
+            z-index: -1;
+        }
+    }
+}

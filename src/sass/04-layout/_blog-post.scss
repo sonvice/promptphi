@@ -1,0 +1,10 @@
+.article{
+    &__image{
+        overflow: hidden;
+    }
+
+    & img{
+        object-fit: cover;
+        height: auto;
+    }
+}

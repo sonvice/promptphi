@@ -1,0 +1,19 @@
+@use '../01-abstracts/functions' as f;
+
+.container{
+    max-width: f.px-to-rem(815px);
+    margin-inline: auto;
+    padding-inline: var(--space-s);
+}
+
+.container-md{
+    max-width: f.px-to-rem(960px);
+    margin-inline: auto;
+    padding-inline: var(--space-s);
+}
+
+.container-lg{
+    max-width: 90rem;
+    margin-inline: auto;
+    padding-inline: var(--space-s);
+}

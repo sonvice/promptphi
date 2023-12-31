@@ -1,0 +1,127 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import { TOOLS_TITLE, TOOLS_DESCRIPTION } from "../../consts";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { ExternalLink } from "lucide-astro";
+import {m,h,a,i} from '../../assets/icons';
+import { Image } from "astro:assets";
+import TagHero from '../../components/TagHero.astro';
+
+
+import {
+  marketing,
+  audioVideo,
+  herramientasIa,
+  imagenes,tagTools
+} from "../../constant";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={TOOLS_TITLE} description={TOOLS_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="tools mt-space-2xl">
+      <div class="container-md">
+        <h1 class="text-capitalize">
+          Descubre el poder transformador de las herramientas de inteligencia
+          artificial.
+        </h1>
+        <p class="mt-space-s">{TOOLS_DESCRIPTION}</p>
+            <TagHero setTags={tagTools} clases={['mt-space-2xl']}></TagHero>
+        <div id="marketing">
+          <h2 class="title-tool text-capitalize d-flex"><Image src={m} alt="Letra M en 3D" width="60" height="60"></Image>Marketing</h2>
+          <ul role="list" class="list-tool | d-grid mt-space-m">
+            {
+              marketing.map((item) => {
+                return(
+                
+                <li class="flow radius overflow-h bg-color-slate-600">
+                  <div>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    </div>
+                    <div class="list-tool__text | p-space-s flow">
+                        <h3 class="text-capitalize">{item.title}</h3>
+                        <p class="size--1 text-color-slate-300">{item.description}</p>
+                        <a class="list-tool__link | d-flex text-color-slate-50 text-capitalize" target="_blank" href={item.url}>{item.title}<ExternalLink size={18}/></a>
+                    </div>
+                </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+        <div id="imagenes" class="mt-space-3xl">
+          <h2 class="title-tool text-capitalize d-flex"><Image src={i} alt="Letra I en 3D" width="60" height="60"></Image>Imágenes</h2>
+          <ul role="list" class="list-tool | d-grid mt-space-m">
+            {
+              imagenes.map((item) => {
+                return(
+                
+                <li class="flow radius overflow-h bg-color-slate-600">
+                  <div>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    </div>
+                    <div class="list-tool__text | p-space-s flow">
+                        <h3 class="text-capitalize">{item.title}</h3>
+                        <p class="size--1 text-color-slate-300">{item.description}</p>
+                        <a class="list-tool__link | d-flex text-color-slate-50 text-capitalize" target="_blank" href={item.url}>{item.title}<ExternalLink size={18}/></a>
+                    </div>
+                </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+        <div id="audio-y-video">
+          <h2 class="title-tool text-capitalize d-flex"><Image src={a} alt="Letra A en 3D" width="60" height="60"></Image>Audio y Vídeo</h2>
+          <ul role="list" class="list-tool | d-grid mt-space-m">
+            {
+              audioVideo.map((item) => {
+                return(
+                
+                <li class="flow radius overflow-h bg-color-slate-600">
+                  <div>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    </div>
+                    <div class="list-tool__text | p-space-s flow">
+                        <h3 class="text-capitalize">{item.title}</h3>
+                        <p class="size--1 text-color-slate-300">{item.description}</p>
+                        <a class="list-tool__link | d-flex text-color-slate-50 text-capitalize" target="_blank" href={item.url}>{item.title}<ExternalLink size={18}/></a>
+                    </div>
+                </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+        <div id="herramientas-ia">
+          <h2 class="title-tool text-capitalize d-flex"><Image src={h} alt="Letra H en 3D" width="60" height="60"></Image>Herramientas IA</h2>
+          <ul role="list" class="list-tool | d-grid mt-space-m">
+            {
+              herramientasIa.map((item) => {
+                return(
+                
+                <li class="flow radius overflow-h bg-color-slate-600">
+                  <div>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    </div>
+                    <div class="list-tool__text | p-space-s flow">
+                        <h3 class="text-capitalize">{item.title}</h3>
+                        <p class="size--1 text-color-slate-300">{item.description}</p>
+                        <a class="list-tool__link | d-flex text-color-slate-50 text-capitalize" target="_blank" href={item.url}>{item.title}<ExternalLink size={18} /></a>
+                    </div>
+                </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      </div>
+    </main>
+    <Footer/>
+  </body>
+</html>
