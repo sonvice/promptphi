@@ -23,6 +23,18 @@ const setTags = [...new Set(joinArr)];
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-98F656TD2V"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-98F656TD2V");
+    </script>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
@@ -33,16 +45,24 @@ const setTags = [...new Set(joinArr)];
         <span class="js-count-particles"></span>
       </div>
       <HeroTitle />
-      
-        <TagHero setTags={setTags} clases={['container mt-space-2xl']}  />
 
+      <TagHero setTags={setTags} clases={["container mt-space-2xl"]} />
 
       {
         setTags.map((tag) => (
           <ul role="list" id={tag} class="list-prompt | container">
-            
-              <li id={`${tag.split(' ').join('-').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`} class="list-prompt__title | size-2">{tag}</li>
-           
+            <li
+              id={`${tag
+                .split(" ")
+                .join("-")
+                .toLocaleLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")}`}
+              class="list-prompt__title | size-2"
+            >
+              {tag}
+            </li>
+
             {prompts.map((prompt, index) =>
               prompt.data.tags.includes(tag) ? (
                 <li role="listitem">
@@ -71,7 +91,7 @@ const setTags = [...new Set(joinArr)];
           const particlesContainer = document.querySelector("#particles-js");
           // Esto solo se ejecuta una vez.
           if (particlesContainer) {
-            particlesJS("particles-js", { 
+            particlesJS("particles-js", {
               particles: {
                 number: {
                   value: 80,
