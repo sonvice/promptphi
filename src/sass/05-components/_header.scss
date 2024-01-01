@@ -12,6 +12,8 @@
     &__list{
         a {
             --gutter:var(--space-2xs);
+            text-decoration: none;
+            color: var(--color-slate-50);
         }
     }
 }
