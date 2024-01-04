@@ -1,0 +1,61 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import { CURSO_TITLE,CURSO_DESCRIPTION } from '../../consts'
+import { cursos } from '../../constant';
+import { Image } from "astro:assets";
+import { ExternalLink } from "lucide-astro";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-98F656TD2V"
+    ></script>
+    <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+        dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-98F656TD2V");
+    </script>
+   <BaseHead title={CURSO_TITLE} description={CURSO_DESCRIPTION}/>
+</head>
+<body>
+    <Header/>
+    <main class="mt-space-2xl">
+        <div class="container-md">
+            <h1 class="text-capitalize">
+                Cursos de Inteligencia Artificial: Domina las Tendencias Actuales en IA
+              </h1>
+              <p class="mt-space-s">{CURSO_DESCRIPTION}</p>
+        </div>
+            <div class="container-md">
+
+                <h2 class="title-tool text-capitalize d-flex">Cursos</h2>
+                <ul role="list" class="list-tool | d-grid mt-space-m">
+                  {
+                    cursos.map((item) => {
+                      return(
+                        <li class="flow radius overflow-h bg-color-slate-600">
+                            <div>
+                            <Image src={item.img} width={item.img.width/2} alt={item.description}/>
+                            </div>
+                            <div class="list-tool__text | p-space-s flow">
+                                <h3 class="text-capitalize">{item.title}</h3>
+                                <p class="size--1 text-color-slate-300">{item.description}</p>
+                                <a class="list-tool__link | d-flex text-color-slate-50 text-capitalize" target="_blank" href={item.url}>{item.title}<ExternalLink size={18}/></a>
+                            </div>
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
+            </div>
+         
+    </main>
+</body>
+</html>

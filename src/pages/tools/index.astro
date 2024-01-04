@@ -44,8 +44,8 @@ import {
         </h1>
         <p class="mt-space-s">{TOOLS_DESCRIPTION}</p>
             <TagHero setTags={tagTools} clases={['mt-space-2xl']}></TagHero>
-        <div id="marketing">
-          <h2 class="title-tool text-capitalize d-flex"><Image src={m} alt="Letra M en 3D" width="60" height="60"></Image>Marketing</h2>
+        <section id="marketing">
+          <h2 class="title-tool text-capitalize d-flex"><Image src={m} alt="Letra M en 3D" width="60" height="60"/>Marketing</h2>
           <ul role="list" class="list-tool | d-grid mt-space-m">
             {
               marketing.map((item) => {
@@ -53,7 +53,7 @@ import {
                 
                 <li class="flow radius overflow-h bg-color-slate-600">
                   <div>
-                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}/>
                     </div>
                     <div class="list-tool__text | p-space-s flow">
                         <h3 class="text-capitalize">{item.title}</h3>
@@ -65,8 +65,8 @@ import {
               })
             }
           </ul>
-        </div>
-        <div id="imagenes" class="mt-space-3xl">
+        </section>
+        <section id="imagenes" class="mt-space-3xl">
           <h2 class="title-tool text-capitalize d-flex"><Image src={i} alt="Letra I en 3D" width="60" height="60"></Image>Imágenes</h2>
           <ul role="list" class="list-tool | d-grid mt-space-m">
             {
@@ -75,7 +75,7 @@ import {
                 
                 <li class="flow radius overflow-h bg-color-slate-600">
                   <div>
-                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}/>
                     </div>
                     <div class="list-tool__text | p-space-s flow">
                         <h3 class="text-capitalize">{item.title}</h3>
@@ -87,8 +87,8 @@ import {
               })
             }
           </ul>
-        </div>
-        <div id="audio-y-video">
+        </section>
+        <section id="audio-y-video">
           <h2 class="title-tool text-capitalize d-flex"><Image src={a} alt="Letra A en 3D" width="60" height="60"></Image>Audio y Vídeo</h2>
           <ul role="list" class="list-tool | d-grid mt-space-m">
             {
@@ -97,7 +97,7 @@ import {
                 
                 <li class="flow radius overflow-h bg-color-slate-600">
                   <div>
-                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}/>
                     </div>
                     <div class="list-tool__text | p-space-s flow">
                         <h3 class="text-capitalize">{item.title}</h3>
@@ -109,8 +109,8 @@ import {
               })
             }
           </ul>
-        </div>
-        <div id="herramientas-ia">
+        </section>
+        <section id="herramientas-ia">
           <h2 class="title-tool text-capitalize d-flex"><Image src={h} alt="Letra H en 3D" width="60" height="60"></Image>Herramientas IA</h2>
           <ul role="list" class="list-tool | d-grid mt-space-m">
             {
@@ -119,7 +119,7 @@ import {
                 
                 <li class="flow radius overflow-h bg-color-slate-600">
                   <div>
-                    <Image src={item.img} width={item.img.width/2} alt={item.description}>
+                    <Image src={item.img} width={item.img.width/2} alt={item.description}/>
                     </div>
                     <div class="list-tool__text | p-space-s flow">
                         <h3 class="text-capitalize">{item.title}</h3>
@@ -131,7 +131,7 @@ import {
               })
             }
           </ul>
-        </div>
+        </section>
       </div>
     </main>
     <Footer/>

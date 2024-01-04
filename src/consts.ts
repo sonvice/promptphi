@@ -11,3 +11,6 @@ export const BLOG_DESCRIPTION = 'Explora las últimas novedades en inteligencia 
 
 export const TOOLS_TITLE = 'PromptPhi | IA Tools';
 export const TOOLS_DESCRIPTION = 'Explora la capacidad transformadora de las herramientas de inteligencia artificial, que van desde chatbots hasta algoritmos avanzados.'
+
+export const CURSO_TITLE = 'PromptPhi | Cursos Gratis de Inteligencia Artificial';
+export const CURSO_DESCRIPTION = 'Descubre un mundo de conocimientos con los cursos gratis especializados en inteligencia artificial, de Google, Udacity, Helsinki University, Stanford University, y más.'

@@ -49,6 +49,8 @@ import {
 } from "../assets/images/video";
 import { Krisp, aiCodeReviewer, assemblyai, browse, cleanvoice, getflair, getpattern, lex, nuclia, otter, phraser, pragma, promptbase, promptfolder, promptomania, quickchat, theresanaiforthat, trustfinta, writesonic } from "../assets/images/herramientas";
 
+import {google,helsinki,udacity,stanford } from '../assets/images/cursos'
+
 export const tagTools = [
   "Marketing",
   "Imágenes",
@@ -624,3 +626,43 @@ export const herramientasIa = [
     icon: "",
   },
 ];
+
+
+export const cursos = [
+  {
+    img: google,
+    title: "AI Google",
+    description:
+      "Google ofrece una gran cantidad de cursos de formación y cursos prácticos que cubren todos los aspectos de la IA y el aprendizaje automático.",
+    url: "https://ai.google/build",
+    tag: "FREE",
+    icon: "",
+  },
+  {
+    img: udacity,
+    title: "Udacity",
+    description:
+      "Udacity ofrece un curso gratuito titulado Introducción a la Inteligencia Artificial ",
+    url: "https://www.udacity.com/course/intro-to-artificial-intelligence--cs271",
+    tag: "FREE",
+    icon: "",
+  },
+  {
+    img: helsinki,
+    title: "Universidad de Helsinki",
+    description:
+      "De la mano de MinnaLearn y la Universidad de Helsinki ponen a disposición: Elements of AI - Introducción a la IA es un curso gratuito en línea dirigido a todos los que están interesados en aprender qué es la IA",
+    url: "https://www.elementsofai.com/es/",
+    tag: "FREE",
+    icon: "",
+  },
+  {
+    img: stanford,
+    title: "Stanford University",
+    description:
+      "A menudo citado por los expertos en IA como el recurso en línea más importante para cualquiera que quiera aprender IA, este curso está dirigido por Andrew Ng, quien fundó el programa pionero de aprendizaje profundo Google Brain de Google.",
+    url: "https://www.coursera.org/learn/machine-learning",
+    tag: "FREE",
+    icon: "",
+  },
+]
