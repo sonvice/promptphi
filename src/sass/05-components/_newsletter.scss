@@ -1,3 +1,5 @@
+@use '../01-abstracts/' as ab;
+
 .newsletter{
     position: relative;
 
@@ -32,9 +34,10 @@
             border: none;
             font-weight: var(--fw-semiBold);
             padding-block: var(--space-xs);
+            flex-basis: ab.px-to-rem(150px);
         }
         & input{
-            flex-basis: 280px;
+            flex-basis: ab.px-to-rem(280px);
             padding: var(--space-xs);
         }
     }
