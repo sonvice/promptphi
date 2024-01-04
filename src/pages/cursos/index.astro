@@ -5,6 +5,8 @@ import { CURSO_TITLE,CURSO_DESCRIPTION } from '../../consts'
 import { cursos } from '../../constant';
 import { Image } from "astro:assets";
 import { ExternalLink } from "lucide-astro";
+import Footer from '../../components/Footer.astro';
+import Newsletter from '../../components/Newsetter.astro'; 
 ---
 
 <!DOCTYPE html>
@@ -26,7 +28,7 @@ import { ExternalLink } from "lucide-astro";
 </head>
 <body>
     <Header/>
-    <main class="mt-space-2xl">
+    <main class="mt-space-2xl pb-space-3xl">
         <div class="container-md">
             <h1 class="text-capitalize">
                 Cursos de Inteligencia Artificial: Domina las Tendencias Actuales en IA
@@ -57,5 +59,7 @@ import { ExternalLink } from "lucide-astro";
             </div>
          
     </main>
+    <Newsletter/>
+    <Footer/>
 </body>
 </html>
