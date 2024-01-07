@@ -1,0 +1,30 @@
+---
+
+---
+
+<form
+  name="contact"
+  method="POST"
+  netlify-honeypot="bot-field"
+  data-netlify="true"
+  class="form | flow"
+>
+  <p class="visually-hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </p>
+  <p>
+    <label class="d-flex">
+     <span>Email:</span>  <input placeholder="E-mail" type="text" name="email" />
+    </label>
+  </p>
+  <p>
+    <label class="d-flex">
+     <span>Message:</span>  <textarea name="message" placeholder="Message"></textarea>
+    </label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>

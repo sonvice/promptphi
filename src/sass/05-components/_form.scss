@@ -1,0 +1,22 @@
+@use '../01-abstracts/' as ab;
+
+.form{
+    span{
+        width: 100%;
+    }
+
+    input, textarea{
+        flex-basis: ab.px-to-rem(600px);
+        padding: var(--space-xs);
+        border-radius: var(--radius);
+    }
+    button{
+        all: unset;
+        padding-inline: var(--space-xl);
+        padding-block: var(--space-xs);
+        background-color: var(--color-primary);
+        border-radius: var(--radius);
+        color: var(--color-slate-950);
+        cursor: pointer;
+    }
+}

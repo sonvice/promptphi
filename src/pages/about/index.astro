@@ -1,0 +1,43 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import {ABOUT_DESCRIPTION,ABOUT_TITLE} from '../../consts';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <BaseHead title={ABOUT_TITLE} description={ABOUT_DESCRIPTION}/>
+</head>
+<body>
+    <Header/>
+    <main>
+        <div class="container flow mt-space-3xl">
+    
+            <h1 class="mb-space-l">Acerca de nosotros</h1>
+            <p>
+              ¡Bienvenido a PromptPhi, tu fuente definitiva para explorar el fascinante
+              mundo de la inteligencia artificial (IA)! En nuestra plataforma, nos dedicamos
+              a brindarte acceso a herramientas gratuitas de vanguardia, como Prompt y otras
+              innovaciones que transforman la forma en que interactuamos con la tecnología.
+            </p>
+            <p>
+              En el corazón de PromptPhi, encontrarás un blog vibrante y en constante
+              evolución, donde exploramos los últimos avances, tendencias emocionantes y
+              aplicaciones prácticas de la IA. Nos apasiona compartir conocimiento y
+              descubrimientos, y nuestro compromiso es hacerte partícipe de este viaje hacia
+              el futuro.
+            </p>
+            <p>
+              Nuestra sección de cursos gratuitos está diseñada para empoderarte en el
+              dominio de la inteligencia artificial. Desde principiantes hasta expertos,
+              ofrecemos recursos educativos accesibles que te guiarán en cada paso de tu
+              aprendizaje.
+            </p>
+            <p>Apasionados por la IA y comprometidos con proporcionar recursos valiosos a la comunidad. Únete a nosotros mientras exploramos el potencial ilimitado de la inteligencia artificial y hacemos que la tecnología avanzada esté al alcance de todos. ¡Descubre, aprende y evoluciona con PromptPhi!</p>
+        </div>
+    </main>
+    <Footer/>
+</body>
+</html>
+

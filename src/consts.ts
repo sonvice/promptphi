@@ -14,3 +14,7 @@ export const TOOLS_DESCRIPTION = 'Explora la capacidad transformadora de las her
 
 export const CURSO_TITLE = 'PromptPhi | Cursos Gratis de Inteligencia Artificial';
 export const CURSO_DESCRIPTION = 'Descubre un mundo de conocimientos con los cursos gratis especializados en inteligencia artificial, de Google, Udacity, Helsinki University, Stanford University, y más.'
+
+
+export const ABOUT_TITLE = 'PromptPhi | Acerca de nosotros';
+export const ABOUT_DESCRIPTION = '¡Bienvenido a PromptPhi, tu fuente definitiva para explorar el fascinante mundo de la inteligencia artificial (IA)!'

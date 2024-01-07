@@ -100,6 +100,9 @@ a{
 a:hover{
   text-decoration: none;
 }
+p{
+  max-width: 72ch;
+}
 
 img{
   object-fit: cover;
