@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://promptphi.com/sitemap.xml
+
+Allow: /tools/
+Allow: /cursos/
+Allow: /blog/
+Allow: /
