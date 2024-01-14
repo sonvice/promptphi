@@ -35,7 +35,7 @@ const posts = (await getCollection('blog')).sort(
       <section class="container-md">
         <div class="post-list | d-grid">
           {
-            posts.map((post) => (
+            posts.reverse().map((post) => (
               <article class="post-list__article flow bg-color-slate-600 radius">
                 <div class="post-list__img">
                   <a href={`/blog/${post.slug}/`}>
