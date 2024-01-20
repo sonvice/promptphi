@@ -26,7 +26,7 @@ Los estudios sobre inteligencia artificial tienen una historia de ochenta años,
 En naciones que lideran las inversiones en IA, el desarrollo ha estado históricamente vinculado a la financiación pública. En China, la investigación en IA se financia principalmente a través del gobierno, mientras que en Estados Unidos, durante décadas, las investigaciones fueron respaldadas por agencias federales como la Agencia de Proyectos de Investigación Avanzada de Defensa (DARPA). En los últimos años, el impulso del desarrollo de la IA en Estados Unidos ha pasado en gran medida al sector privado, que ha invertido cuantiosas sumas de dinero en esta iniciativa.
 
 
-![Alt text](./images/explorando-la-inteligencia-artificial/private_investment_2022.jpg)
+![Explorando la inteligencia artificial](./images/explorando-la-inteligencia-artificial/private_investment_2022.jpg)
 <small>Source: NetBase Quid via [Stanford University](https://aiindex.stanford.edu/report/) Artificial Intelligence Index Report.</small>
 
 En 2022, el presidente Joe Biden de los Estados Unidos promulgó la Ley CHIPS y Ciencia, la cual redirige los fondos del gobierno estadounidense hacia la investigación y desarrollo tecnológico. Esta legislación asigna 280 mil millones de dólares en gasto federal para semiconductores, el hardware avanzado necesario para respaldar las enormes capacidades de procesamiento y almacenamiento de datos requeridas por la inteligencia artificial. En enero de 2023, ChatGPT se destacó como la aplicación de consumo de más rápido crecimiento en la historia.
